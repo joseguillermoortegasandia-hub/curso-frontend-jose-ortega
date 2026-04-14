@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AT:ital,wght@0,100..400;1,100..400&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.iPad {
+  margin: 10px;
+  background-image:url(https://www.apple.com/v/home/cl/images/heroes/ipad-air/hero_ipad_air_avail__c34ycq52exg2_mediumtall.jpg);
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+.iPad > h3 {
+  padding: 10px 0 0px 0;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -1.5px !important;
+}
+
+.iPad > div{
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+.iPad> img {
+   font-size: 48px;
+}
+
+.Macbook, .productos {
+  margin: 0px;
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.Macbook{
+  background-image:url(https://www.apple.com/v/home/cl/images/heroes/macbook-pro-m5/hero_macbook_pro_m5__fjgmapbkxo2u_small_2x.jpg);
+}
+
+.watch11 {
+  color: black;
+  background-image: url(https://www.apple.com/v/home/cl/images/promos/apple-watch-series-11/promo_apple_watch_series_11__b63hxviqvonm_small_2x.jpg);
+}
+
+.WATCH{
+  background-image: url(https://www.apple.com/v/home/cl/images/promos/apple-watch-unity/promo_apple_watch_unity__casvx9ysh1le_small_2x.jpg);
+}
+
+.productos > h3 {
+  /* 1. Elimina el espacio exterior */
+  margin: 0 !important;
+  padding: 0 !important;
+
+  /* 2. Controla el espacio "interno" de la línea de texto */
+  /* Un valor menor a 1 (como 0.8) hace que las líneas se encimen */
+  line-height: 0.8 !important;
+
+  /* 3. Truco de Apple: letras más juntas horizontalmente */
+  letter-spacing: -1.5px !important;
+
+  /* 4. Si aún ves espacio, usa margen negativo arriba */
+  margin-top: -5px !important;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+
+.Macbook> h2, .productos > h2 {
+  font-size: 48px;
+}
+.Macbook > h3 {
+  font-size: 24px;
+  font-weight: 400;
+   letter-spacing: -1.5px !important;
+}
+
+
+
+.Macbook> div, .productos > div{
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+.productos {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  /*
+    el !important me permite darle prioridad a una regla de estilo sobre otras reglas que puedan 
+    entrar en conflicto. Esto es útil cuando quieres asegurarte de que un estilo específico se aplique, 
+    incluso si hay otras reglas que podrían anularlo.
+
+    Sin embargo, el uso de !important debe ser limitado, ya que puede dificultar el mantenimiento del código 
+    y hacer que sea más difícil de depurar. Es recomendable usarlo solo como último recurso cuando no hay otra 
+    forma de lograr el resultado deseado.
+  */
+  margin: 0!important;
+}
+
+@media only screen and (min-width: 768px) {
+  .productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+
+
+
+
+
