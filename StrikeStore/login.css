@@ -1,0 +1,54 @@
+
+
+body {
+  background-color: rgb(13, 13, 95);
+  margin: 0;
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div{
+  background-color: rgb(255, 255, 255);
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 20px;
+ 
+}
+
+h1{
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+}
+
+:hover input{
+  border-color: rgb(13, 13, 95);
+}
+
+#correo,#contraseña{
+color: white;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+button{
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  align-items: center;
+}
