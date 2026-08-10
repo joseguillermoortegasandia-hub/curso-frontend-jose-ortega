@@ -1,0 +1,16 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.boton-destacado{
+  color: blueviolet;
+  background-color: antiquewhite;
+  border-radius:  100px; ;
+  display: inline-block;
+  padding: 10px 5px;
+}
+
+body{
+  padding: 65px;
+}

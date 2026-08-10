@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+ <div>
+  <h1>Strike Store</h1>
+  <form id="loginForm">
+    <label id="correo">Correo electrónico:</label>
+    <br>
+    <input type="text" id="correo" name="correo" required placeholder="correo@gmail.com">
+    <br>
+    <label id="contraseña">Contraseña:</label>
+    <br>
+    <input type="password" id="contraseña" name="contraseña" required placeholder="Contraseña">
+    <br>
+    <button type="submit" id="submit">Iniciar sesión</button>
+    <br>
+    <p>¿No tienes una cuenta? <a href="registro.html">Regístrate aquí</a></p>
+      
+  </form>
+</div>
+<script>
+   const usuarioEncontrado = localStorage.getItem('usuarioEncontrado');
+      if (usuarioEncontrado) {
+        window.location.href = 'store.html';
+      }
+    function ejecutarLogin(correo, contraseña) {
+        const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+        const usuarioEncontrado = usuarios.find(usuario => usuario.correo === correo);
+
+        if (usuarioEncontrado) {
+            if (usuarioEncontrado.contraseña === contraseña) {
+                alert("Inicio de sesión exitoso");
+                 const { contraseña,... sesion } = usuarioEncontrado;
+                localStorage.setItem('usuarioEncontrado', JSON.stringify(sesion));
+                window.location.href = "store.html";
+            } else {
+                alert("Contraseña incorrecta");
+            }
+        } else {
+            alert("Correo electrónico no encontrado");
+            window.location.href = "registro.html";
+        }
+    }
+</script>
+</body>
+</html>
